@@ -6,11 +6,11 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 07:59:21 by mfontain          #+#    #+#             */
-/*   Updated: 2025/10/27 07:59:27 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:16:40 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+/*void	*ft_memset(void *s, int c, unsigned int n)
 {
 	unsigned int	i;
 	unsigned char *tab;
@@ -23,13 +23,25 @@ void	*ft_memset(void *s, int c, unsigned int n)
 		i++;
 	}
 	return (tab);
+}*/
+void	*ft_memset(void *s, int c, unsigned int n)
+{
+	unsigned char	*tab;
+
+	tab = (unsigned char *)s;
+	while(n > 0)
+	{
+		*tab++ = (unsigned char)c;
+		n--;
+	}
+	return (tab);
 }
 
 #include <unistd.h>
 
-int	main(void)
+/*int	main(void)
 {
 	char	txt[6] = "Hello";
-	ft_memset(txt, 'A', 2);
+	ft_memset(txt, 'A', 3);
 	write(1, txt, 6);
-}
+}*/

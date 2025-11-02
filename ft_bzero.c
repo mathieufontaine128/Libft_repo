@@ -6,11 +6,11 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 07:58:55 by mfontain          #+#    #+#             */
-/*   Updated: 2025/10/27 07:59:02 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/10/29 19:34:51 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+/*void	ft_bzero(void *s, unsigned int n)
 {
 	unsigned int	i;
 	unsigned char *tab;
@@ -22,8 +22,20 @@ void	ft_bzero(void *s, unsigned int n)
 		tab[i] = '\0';
 		i++;
 	}
-}
+}*/
 
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char *tab;
+
+	tab = (unsigned char *)s;
+	while(n > 0)
+	{
+		*tab++ = '\0';
+		n--;
+	}
+
+}
 /*#include <unistd.h>
 #include <stdio.h>
 #include <string.h>
