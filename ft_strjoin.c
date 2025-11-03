@@ -6,7 +6,7 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 06:43:11 by mfontain          #+#    #+#             */
-/*   Updated: 2025/11/02 17:01:06 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/11/03 23:53:06 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -28,7 +28,6 @@ int	ft_total_len(char *s1, char *s2)
 	int	total;
 
 	total = ft_strlen(s1) + ft_strlen(s2);
-
 	return (total);
 }
 
@@ -73,11 +72,11 @@ char	*ft_strjoin(char *s1, char *s2)
 	ft_strcat(tab, s1, s2);
 	return (tab);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int	main()
 {
 	char *tabresult = ft_strjoin("hello", "world");
 	printf("%s\n", tabresult);
 	free(tabresult);
 
-}
+}*/

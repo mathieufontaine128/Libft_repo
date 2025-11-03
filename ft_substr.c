@@ -1,48 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 23:36:00 by mfontain          #+#    #+#             */
+/*   Updated: 2025/11/03 23:49:15 by mfontain         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <stdlib.h>
-int	ft_strlen(char const *str)
+
+unsigned int	ft_strlen(char const *str)
 {
-	int	len;
+	unsigned int	len;
 
 	len = 0;
-	while(str[len])
+	while (str[len])
 		len++;
-	return(len);
+	return (len);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
-	size_t	s_len;
 
 	if (!s)
-		return(NULL);
-	s_len = ft_strlen(s);
-	if(start >= s_len)
+		return (NULL);
+	if (start >= ft_strlen(s))
 	{
 		substr = malloc(1);
 		if (substr)
 			substr[0] = '\0';
-		return(substr);
+		return (substr);
 	}
-	if(len > s_len - start)
-		len = s_len - start;
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	substr = (char *)malloc(len + 1);
-	if(!substr)
-		return(NULL);
+	if (!substr)
+		return (NULL);
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		substr[i] = s[start + i];
 		i++;
 	}
 	substr[i] = '\0';
-	return(substr);
+	return (substr);
 }
-
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	//char tab[] = "hello les amis"
 	printf("donc : %s",(ft_substr("hello les amis", 3, 7)));
-}
+}*/
