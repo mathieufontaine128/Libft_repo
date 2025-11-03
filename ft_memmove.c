@@ -6,7 +6,7 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 09:01:32 by mfontain          #+#    #+#             */
-/*   Updated: 2025/10/27 14:14:08 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:38:48 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*int	ft_strlen(char *src)
@@ -46,15 +46,14 @@ void	*ft_memmove(void *dest, const void *src, unsigned int n)
 
 void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {
-	unsigned char 	*d;
+	unsigned char	*d;
 	unsigned char	*s;
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-
 	if (d < s)
 	{
-		while(n > 0)
+		while (n > 0)
 		{
 			*d++ = *s++;
 			n--;
@@ -64,18 +63,15 @@ void	*ft_memmove(void *dest, const void *src, unsigned int n)
 	{
 		d += n;
 		s += n;
-		
 		while (n > 0)
 		{
 			*--d = *--s;
 			n--;
 		}
 	}
-	
 	return (d);
 }
-
-#include <string.h>
+/*#include <string.h>
 #include <stdio.h>
 
 int	main(void)
@@ -93,4 +89,4 @@ int	main(void)
 	printf("txtd2 apres = %s\n", txtd);
 	
 	
-}
+}*/

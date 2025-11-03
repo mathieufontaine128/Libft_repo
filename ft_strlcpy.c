@@ -1,4 +1,4 @@
-/* ************************************************************************ */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 10:39:28 by mfontain          #+#    #+#             */
-/*   Updated: 2025/10/28 21:56:45 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:41:08 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 unsigned int	ft_strlen(const char *str)
@@ -14,9 +14,9 @@ unsigned int	ft_strlen(const char *str)
 	unsigned int	len;
 
 	len = 0;
-	while(str[len])
+	while (str[len])
 		len++;
-	return(len);
+	return (len);
 }
 
 int	ft_strlcpy(char *dest, const char *src, unsigned int size)
@@ -25,11 +25,10 @@ int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	unsigned int	src_len;
 
 	src_len = ft_strlen(src);
-
 	if (src_len == 0)
-		return(src_len);
+		return (src_len);
 	i = 0;
-	while(i < size - 1 && src[i])
+	while (i < size - 1 && src[i])
 	{
 		dest[i] = src[i];
 		i++;

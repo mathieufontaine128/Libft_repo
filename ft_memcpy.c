@@ -1,4 +1,4 @@
-* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 07:59:41 by mfontain          #+#    #+#             */
-/*   Updated: 2025/10/27 13:32:31 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:35:04 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@
 
 void	*ft_memcpy(char *dest, char *src, unsigned int n)
 {
-	while(n > 0)
+	while (n > 0)
 	{
 		*dest++ = *src++;
 		n--;
 	}
-	return(dest);
-}	
-#include <stdio.h>
+	return (dest);
+}
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -41,4 +41,4 @@ int	main(void)
 	printf("ts = %s\n", ts);
 	ft_memcpy(td, ts, 2);
 	printf("after td = %s\n", td);
-}
+}*/

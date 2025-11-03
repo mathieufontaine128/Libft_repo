@@ -6,7 +6,7 @@
 /*   By: mfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 07:58:55 by mfontain          #+#    #+#             */
-/*   Updated: 2025/10/29 19:34:51 by mfontain         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:32:00 by mfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *tab;
+	unsigned char	*tab;
 
 	tab = (unsigned char *)s;
-	while(n > 0)
+	while (n > 0)
 	{
 		*tab++ = '\0';
 		n--;
 	}
-
 }
 /*#include <unistd.h>
 #include <stdio.h>
